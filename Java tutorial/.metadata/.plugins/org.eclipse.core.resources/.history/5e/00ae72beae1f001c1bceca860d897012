@@ -1,0 +1,68 @@
+package studentProgramme;
+import java.util.*;
+
+public class StudentProgram {
+
+	
+	public static void main(String[] args) {
+		
+		int n, total = 0;
+		int  a = 1500;
+		int GPA = 0;
+		int ta = 0;
+		double balance;
+		
+
+		
+		Scanner myObj = new Scanner(System.in);
+	    System.out.println("Enter Student Name :");
+	    String studentName = myObj.nextLine();
+	    
+	
+	    System.out.println("Enter Course Name :");
+	    String course = myObj.nextLine();
+	    
+
+	    
+	    
+	    
+        System.out.print("No of Subjects for your " + course + " Course :");
+        n = myObj.nextInt();
+        
+        int marks[] = new int[n];
+        System.out.println("Enter semester marks for " + n + " Subjects");
+        for(int i = 0; i < n; i++)
+        {
+            marks[i] = myObj.nextInt();
+            total = total + marks[i];
+             GPA = total / n;
+             ta = n * a;
+             
+             balance = ta - (ta*0.15);
+           
+        }
+        
+        
+        
+        System.out.println("Sum:"+total);
+        System.out.println("GPA:"+GPA);
+        System.out.println("Course Amount:"+ta);
+        
+        if (GPA < 50) {
+			System.out.println("We regret to inform that You Failed:-(");
+		}else if(GPA > 50 && GPA < 75){
+			System.out.println(" You Passed");
+		}
+		else {
+			System.out.println("**** Excellent ****");
+		}
+	    
+	    
+//	    System.out.println("Enter " + subject + " Test Mark");
+//	    int testMark = myObj.nextInt();
+//	    
+//	    
+//	    System.out.println("Enter " + subject + " Exam Mark");
+//	    int examMark = myObj.nextInt();
+	}
+}

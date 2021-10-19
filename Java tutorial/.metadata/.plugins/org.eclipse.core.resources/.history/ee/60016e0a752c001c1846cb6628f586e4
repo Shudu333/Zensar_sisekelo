@@ -1,0 +1,25 @@
+package readEmails;
+
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
+import org.testng.annotations.Test;
+
+
+public class EmailClickDemo {
+
+	@Test
+	public void clickEmail() {
+
+		String driverPath = System.getProperty("user.dir");
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
+		ChromeDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		driver.get("https://accounts.google.com//");
+		GmailPageObjects gp=PageFactory.initElements(driver, GmailPageObjects.class);
+		gp.enterEmail("ndou.pm@gmail.com");//Replace with your email id
+		gp.enterPassword("9309245488081");//Replace with your password
+		gp.clickEmail("Hello");//Replace with email subject you want to click
+		
+		
+	}
+}

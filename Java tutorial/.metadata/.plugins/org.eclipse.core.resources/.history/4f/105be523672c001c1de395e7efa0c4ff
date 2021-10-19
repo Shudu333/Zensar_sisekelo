@@ -1,0 +1,61 @@
+package readEmails;
+
+import java.util.Properties;
+
+import javax.mail.Folder;
+import javax.mail.Message;
+import javax.mail.Session;
+import javax.mail.Store;
+
+public class OutlookEmail {
+	 /**
+	 * Connects to email server with credentials provided to read from a given
+	 * folder of the email application
+	 * 
+	 * @param username Email username (e.g. janedoe@email.com)
+	 * @param password Email password
+	 * @param server   Email server (e.g. smtp.email.com)
+	 * @param INBOX    Folder in email application to interact with
+	 * @throws Exception
+	 */
+	    public OutlookEmail() throws Exception {
+	    Properties props = System.getProperties();
+	    props.setProperty("mail.store.protocol", "imap");
+	    props.setProperty("mail.imap.ssl.enable", "true");
+	    props.setProperty("mail.imaps.partialfetch", "false");
+	    props.put("mail.mime.base64.ignoreerrors", "true");
+
+	    Session mailSession = Session.getInstance(props);
+	    mailSession.setDebug(true);
+	    Store store = mailSession.getStore("imap");
+	    store.connect("mail.dopeidea.co.za", "admin@dopeidea.co.za", "mail.dopeidea.co.za");
+
+
+	    Folder folder = store.getFolder("INBOX");
+	    folder.open(Folder.READ_ONLY);
+
+	    System.out.println("Total Message:" + folder.getMessageCount());
+	    System.out.println("Unread Message:" + folder.getUnreadMessageCount());
+
+	   Message messages[] = folder.getMessages();
+
+	    for (Message mail : messages) {         
+
+
+
+	            System.out.println("*********************************");
+	            System.out.println("MESSAGE : \n");
+
+	            System.out.println("Subject: " + mail.getSubject());
+	            System.out.println("From: " + mail.getFrom()[0]);
+	            System.out.println("To: " + mail.getAllRecipients()[0]);
+	            System.out.println("Date: " + mail.getReceivedDate());
+	            System.out.println("Size: " + mail.getSize());
+	            System.out.println("Flags: " + mail.getFlags());
+	            System.out.println("ContentType: " + mail.getContentType());
+//	            System.out.println("Body: \n" + getEmailBody(mail));    
+	            System.out.println("*******************************");          
+
+	    }
+	}
+}

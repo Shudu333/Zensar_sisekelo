@@ -1,0 +1,26 @@
+content_assist_add_import=true
+content_assist_autoactivation=true
+content_assist_autoactivation_delay=0
+content_assist_autoactivation_triggers_java=abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ._
+content_assist_autoactivation_triggers_javadoc=@\#
+content_assist_autoinsert=true
+content_assist_case_sensitivity=false
+content_assist_disable_completion_trigger_chars=false
+content_assist_favorite_static_members=org.junit.Assert.*;org.junit.Assume.*;org.junit.jupiter.api.Assertions.*;org.junit.jupiter.api.Assumptions.*;org.junit.jupiter.api.DynamicContainer.*;org.junit.jupiter.api.DynamicTest.*;org.mockito.ArgumentMatchers.*;org.mockito.Mockito.*;org.testng.Assert.*
+content_assist_fill_method_arguments=true
+content_assist_guess_method_arguments=true
+content_assist_insert_completion=false
+content_assist_lru_history=<?xml version\="1.0" encoding\="UTF-8" standalone\="no"?><history maxLHS\="100" maxRHS\="10"><lhs name\="basics.Scanner"><rhs name\="basics.Scanner"/></lhs><lhs name\="org.openqa.selenium.html5.LocationContext"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.html5.WebStorage"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.interactions.HasTouchScreen"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.mobile.NetworkConnection"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.remote.RemoteWebDriver"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.WebDriver"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.SearchContext"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.JavascriptExecutor"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsById"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByClassName"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByLinkText"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByName"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByCssSelector"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByTagName"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.internal.FindsByXPath"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.interactions.HasInputDevices"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.HasCapabilities"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.interactions.Interactive"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.TakesScreenshot"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="org.openqa.selenium.chrome.ChromeDriver"><rhs name\="org.openqa.selenium.chrome.ChromeDriver"/></lhs><lhs name\="version1.Voters"><rhs name\="version1.Voters"/></lhs><lhs name\="org.openqa.selenium.By"><rhs name\="org.openqa.selenium.By$ByClassName"/><rhs name\="org.openqa.selenium.By$ByCssSelector"/><rhs name\="org.openqa.selenium.By$ByXPath"/></lhs><lhs name\="org.openqa.selenium.MutableCapabilities"><rhs name\="org.openqa.selenium.chrome.ChromeOptions"/></lhs><lhs name\="org.openqa.selenium.AbstractCapabilities"><rhs name\="org.openqa.selenium.chrome.ChromeOptions"/></lhs><lhs name\="org.openqa.selenium.Capabilities"><rhs name\="org.openqa.selenium.chrome.ChromeOptions"/></lhs><lhs name\="org.openqa.selenium.chrome.ChromeOptions"><rhs name\="org.openqa.selenium.chrome.ChromeOptions"/></lhs></history>
+content_assist_number_of_computers=12
+content_assist_prefix_completion=false
+content_assist_proposals_background=255,255,255
+content_assist_proposals_foreground=0,0,0
+content_assist_show_visible_proposals=true
+content_assist_sorter=org.eclipse.jdt.ui.RelevanceSorter
+eclipse.preferences.version=1
+org.eclipse.jdt.ui.formatterprofiles.version=21
+sourceHoverBackgroundColor=255,255,225
+spelling_locale_initialized=true
+typefilter_migrated=true
+useAnnotationsPrefPage=true
+useQuickDiffPrefPage=true

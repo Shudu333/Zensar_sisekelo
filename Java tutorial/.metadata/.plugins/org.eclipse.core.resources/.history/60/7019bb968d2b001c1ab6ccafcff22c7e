@@ -1,0 +1,44 @@
+package selenium;
+
+import java.io.File;
+
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.io.FileHandler;
+
+public class test {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
+//		WebDriver driver = new ChromeDriver(); 
+		try {
+			
+			ChromeDriver driver = new ChromeDriver();
+			
+			String baseUrl = "www.facebook.com";
+			String tagName = "";
+//			tagName = driver.findElement(By.id("pass")).getTagName();
+			
+			driver.get(baseUrl);
+			
+			TakesScreenshot ts = (TakesScreenshot)driver;
+			
+//			File source = ts.getScreenshotAs(OutputType.FILE);
+			String screenshotName = "screen";
+			File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+			
+			FileHandler.copy(src, new File("C:\\Users\\Ndou\\Desktop\\sc"+ screenshotName + ".png"));
+			
+			System.out.println("screenshot taken");
+			
+		} catch (Exception e) {
+			// TODO: handle exception
+			
+			System.out.println("problem" + e.getMessage());
+		}
+	}
+
+}

@@ -1,0 +1,15 @@
+public class TestModel
+{ public static void main(String[] a)
+  { VoteTable t = new VoteTable();
+
+    System.out.println(t.computeTotals());  // all candidates should have 0s
+
+    t.voteForNader(); 
+    System.out.println(t.computeTotals());  // Nader should have 1
+
+    t.voteForKerry();
+    System.out.println(t.computeTotals());  // Nader and Kerry should have 1
+
+    // etc.
+  }
+}

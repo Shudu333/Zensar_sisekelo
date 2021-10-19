@@ -1,0 +1,46 @@
+package selenium;
+
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class test {
+
+	public static void main(String[] args) {
+	    // TODO Auto-generated method stub. 
+
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
+	WebDriver driver = new ChromeDriver();
+	driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+	driver.manage().window().maximize();
+
+	driver.get("https://webmail.dopeidea.co.za/");
+
+	// gmail login
+	driver.findElement(By.id("user")).sendKeys("admin@dopeidea.co.za");
+//	driver.findElement(By.id("next")).click();
+	driver.findElement(By.id("pass")).sendKeys("mail.dopeidea.co.za");
+	driver.findElement(By.id("login_submit")).click();
+
+	// some optional actions for reaching gmail inbox
+//	driver.findElement(By.xpath("//*[@title='Google apps']")).click();
+//	driver.findElement(By.id("gb23")).click();
+
+	// now talking un-read email form inbox into a list
+//	List<WebElement> unreademeil = driver.findElements(By.xpath());
+
+	List<WebElement> a = driver.findElements(By.xpath("//span[@class='msgicon status unread']"));
+    System.out.println(a.size());
+    for (int i = 0; i < a.size(); i++) {
+        System.out.println(a.get(i).getText());
+        if (a.get(i).getText().equals("Support")) //to click on a specific mail.
+            {                                           
+            a.get(i).click();
+        }
+    }
+	}
+}

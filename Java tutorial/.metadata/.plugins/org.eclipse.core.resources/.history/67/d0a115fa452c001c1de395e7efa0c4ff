@@ -1,0 +1,40 @@
+package selenium;
+
+import java.util.Properties;
+import javax.mail.*;
+import javax.annotation.processing.Filer;
+
+import org.junit.jupiter.api.extension.ExtensionContext.Store;
+import org.openqa.selenium.remote.server.Session;
+
+public class OutlookMailReader {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+		String mailFolderNameString;
+		String emailSubjectContentString;
+		String emailContentString;
+		int lengthOfOTP;
+		
+		String hostName = "mail.bluemoney.online";
+		String username = "idiots@bluemoney.online";
+		String password = "Password123";
+		int messageCount;
+		int unReadMsgCount;
+		String emailSubjectString;
+		String searchTextString;
+		Properties sysProps = System.getProperties();
+		sysProps.setProperty("mail.store.protocol", "imaps");
+		
+		try {
+			Session session = Session.getInstance(sysProps, null);
+			Store store = Session.getStore("imaps");
+			store.connect(hostName, username, password);
+			Filer emailBox = store.getFolder
+			
+		}
+	}
+
+}
+

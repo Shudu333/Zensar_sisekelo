@@ -1,0 +1,10 @@
+package readEmails;
+
+public class OutlookEmail {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

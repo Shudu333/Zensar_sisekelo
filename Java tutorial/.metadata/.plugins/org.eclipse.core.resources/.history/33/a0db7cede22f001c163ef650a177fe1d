@@ -1,0 +1,11 @@
+package testNG;
+
+import org.openqa.selenium.WebDriver;
+
+public class UrlTitle {
+	
+	public String baseUrl = "https://zensar.com";
+	String driverpath = "C:\\selenium\\chromedriver.exe";
+	public WebDriver
+
+}

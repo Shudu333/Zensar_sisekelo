@@ -1,0 +1,30 @@
+package group3;
+
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
+
+public class WebTesting {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+
+		
+		System.setProperty("webdriver.chrome.driver", "C:\\Selenium\\chromedriver.exe");
+		
+		ChromeOptions opt=new ChromeOptions();
+		opt.addArguments("--disable-notifications"); //to disable allow notification pop-up
+		WebDriver driver = new ChromeDriver(opt);
+		
+		 driver.manage().window().maximize(); //Maximize web browser
+		 
+		 //Locate phone number text
+	        WebElement phone_number = driver.findElement(By.cssSelector("#MobileNumber"));
+	        phone_number.sendKeys("0799165729");
+	        Thread.sleep(1000);
+		 
+	}
+
+}

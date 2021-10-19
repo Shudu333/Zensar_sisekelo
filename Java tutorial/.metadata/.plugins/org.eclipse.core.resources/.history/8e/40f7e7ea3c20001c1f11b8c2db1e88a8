@@ -1,0 +1,26 @@
+package studentProgramme;
+import java.util.*;
+
+public class StudentProgram {
+
+	
+	public static void main(String[] args) {
+		
+		/********************* Using Java Random Class ***************************************/
+		        	Random objGenerator = new Random();
+		            for (int iCount = 0; iCount< 6; iCount++){
+		              int randomNumber = objGenerator.nextInt(46);
+		              System.out.println("Random No : " + randomNumber); 
+		              
+		              
+		   
+		             }
+		            
+		            
+		/********************* Using Java Math.Random ***************************************/
+		            for(int xCount = 1; xCount< 6; xCount++){
+		                System.out.println(Math.random()*46);
+		              }
+		     
+	}
+}
