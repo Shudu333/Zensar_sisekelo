@@ -26,6 +26,7 @@ public class Adactin {
     	
     	 System.setProperty("webdriver.chrome.driver", driverpath);
          driver = new ChromeDriver();
+         driver.manage().window().maximize(); //Maximize web browser
          driver.get(baseUrl); 
          
          WebElement email = driver.findElement(By.id("username")); 
@@ -55,9 +56,9 @@ public class Adactin {
 		
        
         
-        location.sendKeys("Sydney");
+        location.sendKeys("London");
         Thread.sleep(1000);
-        hotels.sendKeys("hotel creek");
+        hotels.sendKeys("hotel Sunshine");
         Thread.sleep(1000);
         roomType.sendKeys("standard");
         Thread.sleep(1000);
@@ -77,7 +78,7 @@ public class Adactin {
         Thread.sleep(3000);
         
         File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); 
-        FileUtils.copyFile(screenshot1, new File("C:\\Users\\Ndou\\Desktop\\screen\\"+"Screen"+"1.png"));
+        FileUtils.copyFile(screenshot1, new File("C:\\Users\\Ndou\\Desktop\\screen\\"+"Screen"+".png"));
         
 	}
   
@@ -119,7 +120,7 @@ public class Adactin {
         
         Thread.sleep(3000);
         File screenshot1 = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE); 
-        FileUtils.copyFile(screenshot1, new File("C:\\Users\\Ndou\\Desktop\\screen\\"+"Screen"+".png"));
+        FileUtils.copyFile(screenshot1, new File("C:\\Users\\Ndou\\Desktop\\sss\\"+"Screen"+"1.png"));
 	}
     
  
@@ -128,6 +129,8 @@ public class Adactin {
 	  
 	  WebElement logout = driver.findElement(By.xpath("/html/body/table[2]/tbody/tr[1]/td[2]/a[4]")); 
 	  logout.click();
+	  
+	  
 	
 }
 

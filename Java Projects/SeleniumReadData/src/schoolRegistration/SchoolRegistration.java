@@ -152,7 +152,7 @@ public class SchoolRegistration {
             }
             
             // Write the data back in the Excel file
-            FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Ndou\\Desktop\\SchoolRegistration\\TestResults.xls");
+            FileOutputStream outputStream = new FileOutputStream("C:\\Users\\Ndou\\Desktop\\SchoolRegistration\\TestResults.xlsx");
             wb.write(outputStream);
 
           
