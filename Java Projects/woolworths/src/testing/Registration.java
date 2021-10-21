@@ -49,8 +49,7 @@ public class Registration {
      driver = new ChromeDriver();
      driver.get(baseUrl); 
     	
-    	
-    	
+  
     	
 
     	  WebElement login=driver.findElement(By.xpath("/html/body/div[1]/div/header/div[2]/div/section[2]/nav/ul/li[1]/span/strong"));
@@ -114,15 +113,16 @@ public class Registration {
          	js.executeScript("arguments[0].click();", financialCheck);
          	
          	js.executeScript("arguments[0].click();", submitBtn);
- //submitBtn.click();
+
 
          
          	Thread.sleep(1000);
          	
-             WebElement confirmationMessage = driver.findElement(By.xpath("//*[@id=\"regForm\"]/div[1]/div[1]"));
+             
+             WebElement errormessage = driver.findElement(By.xpath("//span[@class='form-field__msg form-field__msg--error']"));
              
             
-             if (confirmationMessage.isDisplayed()) {
+             if (errormessage.isDisplayed() ) {
              	
              	excelUtils.setCellValue(i,9,"PASS",excelFilePath);
              } else {
@@ -130,17 +130,59 @@ public class Registration {
                  excelUtils.setCellValue(i,9,"FAIL",excelFilePath);
              }
 
-          
-          
             
-//             driver.manage().timeouts().implicitlyWait(2000,TimeUnit.SECONDS);
          }
-         
-         
-         
-     
+
     	
 	}
+    
+//    @Test
+//    public void login() throws InterruptedException, IOException {
+//    	
+//   	 WebElement login=driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[2]/aside/section[1]/a"));
+//		login.click();
+//   	
+//   	 WebElement email=driver.findElement(By.id("fldEmailAddressSml"));
+//        WebElement password=driver.findElement(By.id("fldPasswordSml"));
+//        WebElement submitBtn=driver.findElement(By.id("login"));
+//        
+//        excelUtils.setExcelFile(excelFilePath,"Sheet1");
+//
+//        
+//        for(int i=1;i<=excelUtils.getRowCountInSheet();i++)
+//        {
+//        	Thread.sleep(1000);
+//        	
+//        	email.clear();
+//        	email.sendKeys(excelUtils.getCellData(i,3));
+//        	
+//        	password.clear();
+//        	Thread.sleep(1000);
+//        	password.sendKeys(excelUtils.getCellData(i,5));
+//        	
+//        	Thread.sleep(1000);
+//          	JavascriptExecutor js = (JavascriptExecutor) driver;
+//        	js.executeScript("arguments[0].click();", submitBtn);
+//        	 
+//
+//        	Thread.sleep(5000);
+//        	         	
+//        	WebElement errormsg = driver.findElement(By.xpath("//div[@class='text-small message message--error']"));
+//        	
+//        	Thread.sleep(1000);
+//        	 if (errormsg.isDisplayed() ) {
+//              	
+//              	excelUtils.setCellValue(i,11,"PASS",excelFilePath);
+//              } else {
+//                  
+//                  excelUtils.setCellValue(i,11,"FAIL",excelFilePath);
+//              }
+//
+//        	            
+//         }
+//        	
+//	}
+    
 //    @Test
 //    public void logout() {
 //    	
@@ -152,7 +194,7 @@ public class Registration {
 //	}
     @AfterTest
     public void closeBrowser() {
-    	
+    	driver.manage().timeouts().implicitlyWait(2000,TimeUnit.SECONDS);
     	
         //closing the driver
         driver.quit();
