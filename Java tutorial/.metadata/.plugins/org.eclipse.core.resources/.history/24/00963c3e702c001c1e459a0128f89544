@@ -1,5 +1,0 @@
-package readEmails;
-
-public @interface Test {
-
-}

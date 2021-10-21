@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;Voting&apos; to &apos;VoteTable&apos;&#x0D;&#x0A;- Original project: &apos;VotingApp&apos;&#x0D;&#x0A;- Original element: &apos;Voting&apos;&#x0D;&#x0A;- Renamed element: &apos;VoteTable&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;Voting&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;{Voting.java[Voting" matchStrategy="1" name="VoteTable" qualified="false" references="true" similarDeclarations="false" stamp="1633423698154" textual="false" version="1.0"/>
-</session>
