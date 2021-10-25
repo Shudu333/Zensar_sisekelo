@@ -24,5 +24,6 @@
 	<classpathentry kind="lib" path="C:/Selenium/commons-io-2.11.0.jar"/>
 	<classpathentry kind="lib" path="C:/Selenium/selenium-server-standalone-3.141.59.jar"/>
 	<classpathentry kind="con" path="org.testng.TESTNG_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/5"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

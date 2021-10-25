@@ -136,62 +136,62 @@ public class Registration {
     	
 	}
     
-//    @Test
-//    public void login() throws InterruptedException, IOException {
-//    	
-//   	 WebElement login=driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[2]/aside/section[1]/a"));
-//		login.click();
-//   	
-//   	 WebElement email=driver.findElement(By.id("fldEmailAddressSml"));
-//        WebElement password=driver.findElement(By.id("fldPasswordSml"));
-//        WebElement submitBtn=driver.findElement(By.id("login"));
-//        
-//        excelUtils.setExcelFile(excelFilePath,"Sheet1");
-//
-//        
-//        for(int i=1;i<=excelUtils.getRowCountInSheet();i++)
-//        {
-//        	Thread.sleep(1000);
-//        	
-//        	email.clear();
-//        	email.sendKeys(excelUtils.getCellData(i,3));
-//        	
-//        	password.clear();
-//        	Thread.sleep(1000);
-//        	password.sendKeys(excelUtils.getCellData(i,5));
-//        	
-//        	Thread.sleep(1000);
-//          	JavascriptExecutor js = (JavascriptExecutor) driver;
-//        	js.executeScript("arguments[0].click();", submitBtn);
-//        	 
-//
-//        	Thread.sleep(5000);
-//        	         	
-//        	WebElement errormsg = driver.findElement(By.xpath("//div[@class='text-small message message--error']"));
-//        	
-//        	Thread.sleep(1000);
-//        	 if (errormsg.isDisplayed() ) {
-//              	
-//              	excelUtils.setCellValue(i,11,"PASS",excelFilePath);
-//              } else {
-//                  
-//                  excelUtils.setCellValue(i,11,"FAIL",excelFilePath);
-//              }
-//
-//        	            
-//         }
-//        	
-//	}
+    @Test
+    public void login() throws InterruptedException, IOException {
+    	
+   	 WebElement login=driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[2]/aside/section[1]/a"));
+		login.click();
+   	
+   	 WebElement email=driver.findElement(By.id("fldEmailAddressSml"));
+        WebElement password=driver.findElement(By.id("fldPasswordSml"));
+        WebElement submitBtn=driver.findElement(By.id("login"));
+        
+        excelUtils.setExcelFile(excelFilePath,"Sheet1");
+
+        
+        for(int i=1;i<=excelUtils.getRowCountInSheet();i++)
+        {
+        	Thread.sleep(1000);
+        	
+        	email.clear();
+        	email.sendKeys(excelUtils.getCellData(i,3));
+        	
+        	password.clear();
+        	Thread.sleep(1000);
+        	password.sendKeys(excelUtils.getCellData(i,5));
+        	
+        	Thread.sleep(1000);
+          	JavascriptExecutor js = (JavascriptExecutor) driver;
+        	js.executeScript("arguments[0].click();", submitBtn);
+        	 
+
+        	Thread.sleep(5000);
+        	         	
+        	WebElement errormsg = driver.findElement(By.xpath("//div[@class='text-small message message--error']"));
+        	
+        	Thread.sleep(1000);
+        	 if (errormsg.isDisplayed() ) {
+              	
+              	excelUtils.setCellValue(i,11,"PASS",excelFilePath);
+              } else {
+                  
+                  excelUtils.setCellValue(i,11,"FAIL",excelFilePath);
+              }
+
+        	            
+         }
+        	
+	}
     
-//    @Test
-//    public void logout() {
-//    	
-//    	
-//    	
-//    	 WebElement logout=driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div[1]/nav/ul/li[10]"));
-//    	 logout.click();
-//		
-//	}
+    @Test
+    public void logout() {
+    	
+    	
+    	
+    	 WebElement logout=driver.findElement(By.xpath("/html/body/div[1]/div/div/main/div[1]/nav/ul/li[10]"));
+    	 logout.click();
+		
+	}
     @AfterTest
     public void closeBrowser() {
     	driver.manage().timeouts().implicitlyWait(2000,TimeUnit.SECONDS);

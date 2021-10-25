@@ -5,6 +5,8 @@
     <classes>
       <class name="testing.Registration">
         <methods>
+          <include name="Registration"/>
+          <include name="logout"/>
           <include name="closeBrowser"/>
           <include name="login"/>
           <include name="launch"/>
