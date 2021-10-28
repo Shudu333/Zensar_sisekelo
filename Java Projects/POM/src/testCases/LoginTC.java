@@ -4,12 +4,13 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import pages.Home;
 import pages.Login;
+import pages.Dashboard;
 
 public class LoginTC {
 	
 public static void main(String[] args) throws InterruptedException {
 		
-		System.setProperty("webdriver.chrome.driver", "---Exact path to chromedriver.exe---");
+		System.setProperty("webdriver.chrome.driver", "C:\\selenium\\chromedriver.exe");
 		WebDriver driver = new ChromeDriver();
 		driver.get("https://www.demoqa.com/books");
 		
@@ -26,8 +27,8 @@ public static void main(String[] args) throws InterruptedException {
 		home.clickLogin();
 		
 		//Enter username & password
-		login.enterUsername("---Your Username---");
-		login.enterPassword("---Your Password---");
+		login.enterUsername("Mashudu");
+		login.enterPassword("Mashudu@1");
 		
 		//Click on login button
 		login.clickLogin();
