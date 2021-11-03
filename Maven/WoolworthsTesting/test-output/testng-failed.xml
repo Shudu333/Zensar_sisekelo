@@ -5,8 +5,11 @@
     <classes>
       <class name="testCases.TCLogin">
         <methods>
+          <include name="c"/>
+          <include name="b"/>
+          <include name="d"/>
+          <include name="a"/>
           <include name="launch"/>
-          <include name="register"/>
         </methods>
       </class> <!-- testCases.TCLogin -->
     </classes>

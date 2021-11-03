@@ -28,6 +28,8 @@ public class RegistrationPage {
 
 	By submitBtn = By.id("fldSubmit");
 	
+	//Locator for login button
+	By LoginBtn = By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[2]/aside/section[1]/a");
 By homeBtmBy = By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[1]/div[2]/ul/li[2]/a");
 	
 	public void title(String wtitle) {
@@ -89,6 +91,9 @@ By homeBtmBy = By.xpath("/html/body/div[1]/div/div[1]/div/main/div/article/div[1
 		
 
 		driver.findElement(homeBtmBy).click();
+	}
+	public void clickLogin() {
+		driver.findElement(LoginBtn).click();
 	}
 	
 	public void geterrormsg() {
