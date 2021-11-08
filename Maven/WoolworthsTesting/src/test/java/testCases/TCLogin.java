@@ -212,8 +212,8 @@ public void d() throws IOException, InterruptedException {
 //	Thread.sleep(3000);
 	
 	js.executeScript("window.scrollBy(0,2250)", "");
-	Thread.sleep(3000);
-	page.clickSelectSize();
+//	Thread.sleep(3000);
+//	page.clickSelectSize();
 	Thread.sleep(3000);
 	page.clickaddtoCart();
 	Thread.sleep(3000);
